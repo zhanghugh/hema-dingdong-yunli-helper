@@ -19,7 +19,7 @@ hemaurl = ' '
 #叮咚请求参数，按抓包填入header
 
 city_number = '0101'
-app_version = '2.83.0'
+app_version = '2.83.1'
 address_id = ''
 station_id = ''
 app_client_id = '4'
