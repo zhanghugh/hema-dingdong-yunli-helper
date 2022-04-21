@@ -46,6 +46,8 @@ urldingdong2='https://maicai.api.ddxq.mobi/cart/index'
 headerdingdong = {
     'content-type': 'application/x-www-form-urlencoded',
     'ddmc-city-number': city_number,
+    'ddmc-longitude': longitude,
+    'ddmc-latitude': latitude,
     'ddmc-build-version': app_version,
     'ddmc-device-id': openid,
     'ddmc-station-id': station_id,
@@ -56,7 +58,7 @@ headerdingdong = {
     'ddmc-uid': uid,
     'user-agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_1 like Mac OS X) AppleWebKit/604.3.5 (KHTML, like Gecko) Mobile/15B93 MicroMessenger/8.0.10(0x18000a2a) NetType/WIFI Language/zh_CN',
     'accept-encoding': 'gzip,compress,br,deflate',
-    'time':timenow,
+    'ddmc-time':timenow,
     'cookie': 'DDXQSESSID='+cookies,
     'referer': 'https://servicewechat.com/wx1e113254eda17715/422/page-frame.html',
 }
@@ -163,7 +165,7 @@ for i in range(800): #循环800次
     #print(cartnarsout) #测试用
 
     getjsondata['nars'] = cartnarsout['nars']
-    getjsondata['nars'] = cartnarsout['sesi']
+    getjsondata['sesi'] = cartnarsout['sesi']
 
 
     htmldingdong = requests.post(urldingdong, headers=headerdingdong, data=requestjsondata, cookies=cookie)
