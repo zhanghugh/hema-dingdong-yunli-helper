@@ -60,7 +60,7 @@ headerdingdong = {
     'accept-encoding': 'gzip,compress,br,deflate',
     'ddmc-time':timenow,
     'cookie': 'DDXQSESSID='+cookies,
-    'referer': 'https://servicewechat.com/wx1e113254eda17715/422/page-frame.html',
+    'referer': 'https://servicewechat.com/wx1e113254eda17715/432/page-frame.html',
 }
 
 hemaheader = {
