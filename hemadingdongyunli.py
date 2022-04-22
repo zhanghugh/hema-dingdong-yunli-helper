@@ -17,13 +17,14 @@ timenow = str(int(time.time()))
 hemaurl = ' '
 
 #叮咚请求参数，按抓包填入header
+#获取https://trackercollect.ddxq.mobi/appInfo/bundle 中的request信息
+#通过网页解码encodeURIComponent http://tools.jb51.net/transcoding/urlencode_decode
 
 city_number = '0101'
 app_version = '2.83.1'
 address_id = ''
 station_id = ''
 app_client_id = '4'
-cookies = '' #只要DDXQSESSID=后的部分
 longitude = '' #ddmc-longitude
 latitude = '' #ddmc-latitude
 api_version = '9.50.0'
@@ -59,7 +60,7 @@ headerdingdong = {
     'user-agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_1 like Mac OS X) AppleWebKit/604.3.5 (KHTML, like Gecko) Mobile/15B93 MicroMessenger/8.0.10(0x18000a2a) NetType/WIFI Language/zh_CN',
     'accept-encoding': 'gzip,compress,br,deflate',
     'ddmc-time':timenow,
-    'cookie': 'DDXQSESSID='+cookies,
+    'cookie': 'DDXQSESSID='+s_id,
     'referer': 'https://servicewechat.com/wx1e113254eda17715/432/page-frame.html',
 }
 
@@ -75,7 +76,7 @@ hemaheader = {
     'authority': 'h5api.m.taobao.com',
 }
 
-cookie={'DDXQSESSID': cookies}
+cookie={'DDXQSESSID': s_id}
 
 signjsondata={
     'uid': uid,
