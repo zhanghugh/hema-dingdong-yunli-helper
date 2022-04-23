@@ -35,7 +35,7 @@ uid = '' #ddmc-uid
 #叮咚请求参数，按抓包填入data
 
 s_id = ''
-openid = '' #pv_id
+openid = '' #open_id
 device_token = ''
 
 #如果要更换商品先请求一次htmldingdong2 https://maicai.api.ddxq.mobi/cart/index 以获取购物车信息推荐购物车仅保留一件商品
