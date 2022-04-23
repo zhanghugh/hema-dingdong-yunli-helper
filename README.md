@@ -12,6 +12,5 @@
 # 叮咚：
 ## 4月23日已更新
 1. 需要抓包，手机或者电脑登录叮咚小程序。
-2. 打开小程序中我的，然后需要通过抓包获取 https://trackercollect.ddxq.mobi/appInfo/bundle 中的request信息。
-3. 通过网页解码encodeURIComponent http://tools.jb51.net/transcoding/urlencode_decode
-4. 按抓包填入header以及data
+2. 打开小程序中我的，点击收货地址。然后需要通过抓包获取 https://sunquan.api.ddxq.mobi/api/v1/user/address/ 中的信息。
+3. 按抓包填入yunliall.py后执行
