@@ -15,6 +15,7 @@ timenow = str(int(time.time()))
 #timenow = '1650413974' #测试用
 
 #盒马请求网页，挑选一个一直有货的商品推荐贵的酒类
+#hemaurl = 'https://hema.taobao.com/s/itemdetail?shopid=198914196&serviceid=578807707316'
 
 hemaurl = ' '
 
