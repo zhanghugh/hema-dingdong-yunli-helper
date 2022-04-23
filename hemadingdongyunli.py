@@ -19,25 +19,26 @@ timenow = str(int(time.time()))
 
 hemaurl = ' '
 
-#叮咚请求参数，按抓包填入header
-#获取https://trackercollect.ddxq.mobi/appInfo/bundle 中的request信息
-#通过网页解码encodeURIComponent http://tools.jb51.net/transcoding/urlencode_decode
 
+#打开小程序中我的，点击收货地址。
+#抓包获取https://sunquan.api.ddxq.mobi/api/v1/user/address/ 中的request和response信息,按抓包填入
+
+#request中
+
+uid = ' ' #ddmc-uid uid
 city_number = '0101'
-app_version = '2.85.1'
-address_id = ''
-station_id = ''
-app_client_id = '4'
-longitude = '' #ddmc-longitude
-latitude = '' #ddmc-latitude
+longitude = ' ' #ddmc-longitude
+latitude = ' ' #ddmc-latitude
+station_id = ' ' #station_id
 api_version = '9.50.0'
-uid = '' #ddmc-uid
+app_client_id = '4'
+app_version = '2.85.1'
+s_id = ' '
+openid = ' ' #open_id
+device_token = ' ‘
 
-#叮咚请求参数，按抓包填入data
-
-s_id = ''
-openid = '' #open_id
-device_token = ''
+#response中
+address_id = ' '
 
 #如果要更换商品先请求一次htmldingdong2 https://maicai.api.ddxq.mobi/cart/index 以获取购物车信息推荐购物车仅保留一件商品
 
