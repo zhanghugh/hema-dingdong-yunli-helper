@@ -8,6 +8,8 @@ import json
 import time
 import execjs
 import copy
+import requests_html
+session=requests_html.HTMLSession()
 
 timenow = str(int(time.time()))
 #timenow = '1650413974' #测试用
@@ -225,28 +227,36 @@ for i in range(800): #循环800次
     if '"disableMsg":null' in htmlsdingdong:
 
         print('叮咚有运力')
+    if '"disableMsg":null' in htmlsdingdong:
 
-        if '自动尝试可用时段' in htmlsdingdong:
-            print('叮咚即将开放运力')
-            #requests.get('https://api2.pushdeer.com/message/push?pushkey= &text=叮咚即将开放运力')  # 推送到手机可选
+        print('叮咚有运力')
 
-        else:
-            for ii in range(15):  # 如果查询失败将循环15次
-                if '当前人多拥挤' in htmlsdingdong2:
-                    print('叮咚拥挤')
-                    time.sleep(1)
-                else:
+        for ii in range(15):  # 如果查询失败将循环15次
+            if "当前人多拥挤" in htmlsdingdong2:
+                print('叮咚拥挤')
+                htmldingdong2 = requests.get(urldingdong2, headers=headerdingdong, params=getjsondata, cookies=cookie)
+                htmlsdingdong2 = htmldingdong2.text
+                print(htmlsdingdong2)
+                time.sleep(2)
+            else:
 
-                    if 'total_origin_money' in htmlsdingdong2:
+                if 'total_origin_money' in htmlsdingdong2:
+
+                    if "自动尝试可用时段" in htmlsdingdong:
+                        print('叮咚即将开放运力')
+                        #requests.get('https://api2.pushdeer.com/message/push?pushkey= &text=叮咚即将开放运力')  # 推送到手机可选
+                        break
+
+                    else:
 
                         print('叮咚有货有运力')
                         #requests.get('https://api2.pushdeer.com/message/push?pushkey= &text=叮咚有货有运力')# 推送到手机可选
                         break
-                    else:
+                else:
 
-                        print('部分无货有运力')
-                        #requests.get('https://api2.pushdeer.com/message/push?pushkey= &text=叮咚部分无货有运力')# 推送到手机可选
-                        break
+                    print('部分无货有运力')
+                    #requests.get('https://api2.pushdeer.com/message/push?pushkey= &text=叮咚部分无货有运力')# 推送到手机可选
+                    break
     else:
 
         if "自动尝试可用时段" in htmlsdingdong:
