@@ -10,7 +10,8 @@ node.js 稳定版
 只需要在手机端打开商品页，建议挑选一个一直有货的商品推荐贵的酒类可以长期监控。
 
 叮咚：
-需要抓包，手机或者电脑登录叮咚小程序，然后添加商品到购物车并进行下单操作，不需要提交订单，然后将以下两个链接中的hearder和data填写到对应栏目即可。
-
-https://maicai.api.ddxq.mobi/order/getMultiReserveTime
-https://maicai.api.ddxq.mobi/cart/index
+4月23日已更新
+需要抓包，手机或者电脑登录叮咚小程序。
+打开小程序中我的，然后需要通过抓包获取 https://trackercollect.ddxq.mobi/appInfo/bundle 中的request信息。
+通过网页解码encodeURIComponent http://tools.jb51.net/transcoding/urlencode_decode
+按抓包填入header以及data
