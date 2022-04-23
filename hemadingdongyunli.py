@@ -248,11 +248,15 @@ for i in range(800): #循环800次
                         #requests.get('https://api2.pushdeer.com/message/push?pushkey= &text=叮咚部分无货有运力')# 推送到手机可选
                         break
     else:
-        if '已约满' in htmlsdingdong:
-            print('叮咚无运力')
+
+        if "自动尝试可用时段" in htmlsdingdong:
+            print('叮咚即将开放运力目前无运力')
+            #requests.get('https://api2.pushdeer.com/message/push?pushkey= &text=叮咚即将开放运力目前无运力')  # 推送到手机可选
         else:
-            #requests.get('https://api2.pushdeer.com/message/push?pushkey= &text=叮咚错误')
-            print('叮咚错误')
+            if "已约满" in htmlsdingdong:
+                print('叮咚无运力')
+            else:
+                print('叮咚错误')
 
     time.sleep(80)
 
