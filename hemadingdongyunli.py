@@ -23,7 +23,7 @@ hemaurl = ' '
 #打开小程序中我的，点击收货地址。
 #抓包获取https://sunquan.api.ddxq.mobi/api/v1/user/address/ 中的request和response信息,按抓包填入
 
-#request中
+#request请求中获取
 
 uid = ' ' #ddmc-uid uid
 city_number = '0101'
@@ -37,7 +37,7 @@ s_id = ' '
 openid = ' ' #open_id
 device_token = ' ‘
 
-#response中
+#response返回station_info中的id
 address_id = ' '
 
 #如果要更换商品先请求一次htmldingdong2 https://maicai.api.ddxq.mobi/cart/index 以获取购物车信息推荐购物车仅保留一件商品
