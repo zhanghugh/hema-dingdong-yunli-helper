@@ -23,7 +23,7 @@ hemaurl = ' '
 #通过网页解码encodeURIComponent http://tools.jb51.net/transcoding/urlencode_decode
 
 city_number = '0101'
-app_version = '2.83.1'
+app_version = '2.85.1'
 address_id = ''
 station_id = ''
 app_client_id = '4'
