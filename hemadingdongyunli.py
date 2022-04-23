@@ -36,7 +36,52 @@ s_id = ''
 openid = ''
 device_token = ''
 
-products = ''' '''
+#如果要更换商品先请求一次htmldingdong2 https://maicai.api.ddxq.mobi/cart/index 以获取购物车信息推荐购物车仅保留一件商品
+
+products = '''[[{
+    "type":1,
+    "id":"5ad69df1c0a1ea426f8b458a",
+    "price":"9.50",
+    "count":2,
+    "description":"",
+    "sizes":[],
+    "cart_id":"5ad69df1c0a1ea426f8b458a",
+    "parent_id":"",
+    "parent_batch_type":-1,
+    "category_path":"58f9e5a1936edf89778b568b,58fb3bcc936edfe6568b5a27",
+    "manage_category_path":"330,340,344",
+    "activity_id":"",
+    "sku_activity_id":"",
+    "conditions_num":"",
+    "product_name":"海天上等蚝油 700g/瓶",
+    "product_type":0,
+    "small_image":"https://img.ddimg.mobi/product/89f3e1f87bf1a1548094728892.jpg!deliver.product.list",
+    "total_price":"19.00",
+    "origin_price":"9.50",
+    "total_origin_price":"19.00",
+    "no_supplementary_price":"9.50",
+    "no_supplementary_total_price":"19.00",
+    "size_price":"0.00",
+    "buy_limit":0,
+    "price_type":0,
+    "promotion_num":0,
+    "instant_rebate_money":"0.00",
+    "is_invoice":1,
+    "sub_list":[],
+    "is_booking":0,
+    "is_bulk":0,
+    "view_total_weight":"瓶",
+    "net_weight":"700",
+    "net_weight_unit":"g",
+    "storage_value_id":0,
+    "temperature_layer":"",
+    "sale_batches":{"batch_type":-1},
+    "is_shared_station_product":0,
+    "is_gift":0,
+    "supplementary_list":[],
+    "order_sort":4,
+    "is_presale":0
+}]]'''
 
 
 #命令开始
